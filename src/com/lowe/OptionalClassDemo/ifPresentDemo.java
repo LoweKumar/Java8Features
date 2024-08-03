@@ -6,10 +6,10 @@ public class ifPresentDemo {
 
     public static Optional<String> getName(){
         // Creating container with value
-//      Optional<String> container = Optional.of("Lowe Kumar");
+      Optional<String> container = Optional.of("Lowe Kumar");
 
         // Creating container with empty value
-        Optional<String> container = Optional.empty();
+//        Optional<String> container = Optional.empty();
         return container;
     }
     public static void main(String[] args) {
@@ -46,16 +46,21 @@ public class ifPresentDemo {
 //        System.out.println(orElseThrowResult);
 
         //.orElseThrow() Demo :
-        try{
-            containerValue.orElseThrow(()->{
-                return new Exception("This is an exception, no value present in the container");
-            });
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-        String orElseThrowResult = containerValue.orElseThrow();
-        System.out.println(orElseThrowResult);
+//        try{
+//            containerValue.orElseThrow(()->{
+//                return new Exception("This is an exception, no value present in the container");
+//            });
+//        }
+//        catch(Exception e){
+//            e.printStackTrace();
+//        }
+//        String orElseThrowResult = containerValue.orElseThrow();
+//        System.out.println(orElseThrowResult);
+
+        //.equals() Demo :
+        Optional<String> temp = Optional.of("Lowe Kumar");
+        String equalsResult = String.valueOf(containerValue.equals(temp));
+        System.out.println(equalsResult);
 
     }
 
